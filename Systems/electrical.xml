@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+ 
+<!-- Generic 28 Volt electrical system -->
+
+<PropertyList>
+
+  <!-- Powere sources -->
+
+  <supplier>
+    <name>Battery1</name>
+    <prop>systems/electrical/suppliers/battery[0]</prop>
+    <kind>battery</kind>
+    <volts>24</volts>
+    <amp-hours>30</amp-hours>
+  </supplier>
+
+  <supplier>
+    <name>Alternator1</name>
+    <prop>systems/electrical/suppliers/alternator[0]</prop>
+    <kind>alternator</kind>
+    <rpm-source>/engines/engine[0]/n2</rpm-source>
+    <rpm-threshold>30</rpm-threshold>
+    <volts>28</volts>
+    <amps>60</amps>
+  </supplier>
+
+  <supplier>
+    <name>Alternator2</name>
+    <prop>systems/electrical/suppliers/alternator[1]</prop>
+    <kind>alternator</kind>
+    <rpm-source>/engines/engine[1]/n2</rpm-source>
+    <rpm-threshold>30</rpm-threshold>
+    <volts>28</volts>
+    <amps>60</amps>
+  </supplier>
+
+  <supplier>
+    <name>External1</name>
+    <prop>systems/electrical/suppliers/external[0]</prop>
+    <kind>external</kind>
+    <volts>24</volts>
+    <amps>60</amps>
+  </supplier>
+
+
+  <!-- Outputs -->
+
+  <bus>
+    <name>Main Bus</name>
+    <prop>systems/electrical/main-bus</prop>
+  </bus>
+
+  <bus>
+    <name>Avionics Bus</name>
+    <prop>systems/electrical/avionics-bus</prop>
+    <prop>systems/electrical/outputs/comm[0]</prop>
+    <prop>systems/electrical/outputs/comm[1]</prop>
+    <prop>systems/electrical/outputs/nav[0]</prop>
+    <prop>systems/electrical/outputs/nav[1]</prop>
+    <prop>systems/electrical/outputs/transponder</prop>
+    <prop>systems/electrical/outputs/gps</prop>
+    <prop>systems/electrical/outputs/adf</prop>
+    <prop>systems/electrical/outputs/dme</prop>
+    <prop>systems/electrical/outputs/audio-panel[0]</prop>
+    <prop>systems/electrical/outputs/autopilot</prop>
+  </bus>
+
+
+  <output>
+    <name>Starter1</name>
+    <prop>systems/electrical/outputs/starter[0]</prop>
+  </output>
+
+  <output>
+    <name>Starter2</name>
+    <prop>systems/electrical/outputs/starter[0]</prop>
+  </output>
+
+  <output>
+    <name>Beacon</name>
+    <prop>systems/electrical/outputs/beacon</prop>
+  </output>
+
+  <output>
+    <name>Strobe</name>
+    <prop>systems/electrical/outputs/beacon</prop>
+  </output>
+
+  <output>
+    <name>Flaps Power</name>
+    <prop>systems/electrical/outputs/flaps</prop>
+  </output>
+
+<!-- Connections -->
+
+  <!-- Power source switches -->
+
+  <connector>
+    <input>Alternator1</input>
+    <output>Main Bus</output>
+    <switch>
+      <prop>controls/electric/engine[0]/generator</prop>
+      <initial-state>off</initial-state>
+    </switch>
+  </connector>
+
+  <connector>
+    <input>Alternator2</input>
+    <output>Main Bus</output>
+    <switch>
+      <prop>controls/electric/engine[1]/generator</prop>
+      <initial-state>off</initial-state>
+    </switch>
+  </connector>
+
+  <connector>
+    <input>External1</input>
+    <output>Main Bus</output>
+    <switch>
+      <prop>controls/electric/external-power</prop>
+      <initial-state>off</initial-state>
+    </switch>
+  </connector>
+
+  <connector>
+    <input>Battery1</input>
+    <output>Main Bus</output>
+    <switch>
+      <prop>controls/electric/battery-switch</prop>
+      <initial-state>off</initial-state>
+    </switch>
+  </connector>
+
+  <connector>
+    <input>Main Bus</input>
+    <output>Avionics Bus</output>
+    <switch>
+      <prop>controls/electric/avionics-switch</prop>
+      <initial-state>off</initial-state>
+    </switch>
+  </connector>
+
+  <connector>
+    <input>Main Bus</input>
+    <output>Starter1</output>
+    <switch>
+      <prop>controls/engines/engine[0]/starter</prop>
+      <initial-state>off</initial-state>
+    </switch>
+  </connector>
+
+  <connector>
+    <input>Main Bus</input>
+    <output>Starter2</output>
+    <switch>
+      <prop>controls/engines/engine[1]/starter</prop>
+      <initial-state>off</initial-state>
+    </switch>
+  </connector>
+
+  <connector>
+    <input>Main Bus</input>
+    <output>Beacon</output>
+    <switch>
+      <prop>controls/lighting/beacon-state/state</prop>
+      <initial-state>off</initial-state>
+    </switch>
+  </connector>
+
+  <connector>
+    <input>Main Bus</input>
+    <output>Strobe</output>
+    <switch>
+      <prop>controls/lighting/strobe-state/state</prop>
+      <initial-state>off</initial-state>
+    </switch>
+    
+  </connector>
+
+</PropertyList>
