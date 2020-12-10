@@ -1,0 +1,683 @@
+<!-- Beechcraft B200
+Syd Adams
+-->
+
+<PropertyList>
+
+    <path>fdeck.ac</path>
+
+    <model>
+        <name>eadi1</name>
+        <path>Aircraft/king-air/Models/Instruments/EFIS/eadi3d.xml</path>
+        <offsets>
+            <x-m>-2.2395</x-m>
+            <y-m>-0.443</y-m>
+            <z-m>0.411</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>eadi2</name>
+        <path>Aircraft/king-air/Models/Instruments/EFIS/eadi3d.xml</path>
+        <offsets>
+            <x-m>-2.2395</x-m>
+            <y-m>0.443</y-m>
+            <z-m>0.411</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>ehsi1</name>
+        <path>Aircraft/king-air/Models/Instruments/EFIS/ehsi3d.xml</path>
+        <offsets>
+            <x-m>-2.2395</x-m>
+            <y-m>-0.443</y-m>
+            <z-m>0.257</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>ehsi2</name>
+        <path>Aircraft/king-air/Models/Instruments/EFIS/ehsi3d.xml</path>
+        <offsets>
+            <x-m>-2.2395</x-m>
+            <y-m>0.443</y-m>
+            <z-m>0.257</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+
+<!-- Controls-->
+
+<animation>
+        <type>rotate</type>
+        <object-name>thr1.lv</object-name>
+        <property>fdm/jsbsim/fcs/throttle-pos-norm</property>
+        <factor>85</factor>
+        <axis>
+            <x>0.0</x>
+            <y>-1.0</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m>-2.072</x-m>
+            <y-m>0</y-m>
+            <z-m>-0.109</z-m>
+        </center>
+    </animation>
+
+<animation>
+        <type>rotate</type>
+        <object-name>thr2.lv</object-name>
+        <property>fdm/jsbsim/fcs/throttle-pos-norm[1]</property>
+        <factor>85</factor>
+        <axis>
+            <x>0.0</x>
+            <y>-1.0</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m>-2.072</x-m>
+            <y-m>0</y-m>
+            <z-m>-0.109</z-m>
+        </center>
+    </animation>
+
+<animation>
+        <type>rotate</type>
+        <object-name>adv1.lv</object-name>
+        <property>fdm/jsbsim/fcs/advance-pos-norm[0]</property>
+        <factor>75</factor>
+        <axis>
+            <x>0.0</x>
+            <y>-1.0</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m>-2.072</x-m>
+            <y-m>0</y-m>
+            <z-m>-0.109</z-m>
+        </center>
+    </animation>
+
+
+<animation>
+        <type>rotate</type>
+        <object-name>adv2.lv</object-name>
+        <property>fdm/jsbsim/fcs/advance-pos-norm[1]</property>
+        <factor>75</factor>
+        <axis>
+            <x>0.0</x>
+            <y>-1.0</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m>-2.072</x-m>
+            <y-m>0</y-m>
+            <z-m>-0.109</z-m>
+        </center>
+    </animation>
+
+<animation>
+        <type>rotate</type>
+        <object-name>mx1.lv</object-name>
+        <property>fdm/jsbsim/fcs/mixture-pos-norm[0]</property>
+        <factor>75</factor>
+        <axis>
+            <x>0.0</x>
+            <y>-1.0</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m>-2.072</x-m>
+            <y-m>0</y-m>
+            <z-m>-0.109</z-m>
+        </center>
+    </animation>
+
+<animation>
+        <type>rotate</type>
+        <object-name>mx2.lv</object-name>
+        <property>fdm/jsbsim/fcs/mixture-pos-norm[1]</property>
+        <factor>75</factor>
+        <axis>
+            <x>0.0</x>
+            <y>-1.0</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m>-2.072</x-m>
+            <y-m>0</y-m>
+            <z-m>-0.109</z-m>
+        </center>
+    </animation>
+
+<!-- Pilot instruments-->
+
+<animation>
+        <type>rotate</type>
+        <object-name>asi1.nd</object-name>
+        <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+        <interpolation>
+            <entry><ind>0.0</ind><dep>0.0</dep></entry>
+            <entry><ind>20.0</ind><dep>0.0</dep></entry>
+            <entry><ind>300.0</ind><dep>333.50</dep></entry>
+        </interpolation>
+        <axis>
+            <x>-1.0</x>
+            <y>0.0</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m>-2.248</x-m>
+            <y-m>-0.562</y-m>
+            <z-m>0.382</z-m>
+        </center>
+    </animation>
+
+<animation>
+        <type>rotate</type>
+        <object-name>br1.nd</object-name>
+        <property>/instrumentation/airspeed-indicator/airspeed-limit-kt</property>
+        <interpolation>
+            <entry><ind>0.0</ind><dep>0.0</dep></entry>
+            <entry><ind>20.0</ind><dep>0.0</dep></entry>
+            <entry><ind>300.0</ind><dep>333.50</dep></entry>
+        </interpolation>
+        <axis>
+            <x>-1.0</x>
+            <y>0.0</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m>-2.248</x-m>
+            <y-m>-0.562</y-m>
+            <z-m>0.382</z-m>
+        </center>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>vsi1.nd</object-name>
+        <property>autopilot/internal/vert-speed-fpm</property>
+        <interpolation>
+            <entry><ind>-4000.0</ind><dep>-175.0</dep></entry>
+            <entry><ind>-1000.0</ind><dep>-70.0</dep></entry>
+            <entry><ind>0.0</ind><dep>0.0</dep></entry>
+            <entry><ind>1000.0</ind><dep>70.0</dep></entry>
+            <entry><ind>4000.0</ind><dep>175.0</dep></entry>
+        </interpolation>
+        <axis>
+            <x>-1.0</x>
+            <y>0</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m>-2.248</x-m>
+            <y-m>-0.317</y-m>
+            <z-m>0.330</z-m>
+        </center>
+    </animation>
+
+<!-- Engine gauges-->
+
+    <animation>
+        <type>rotate</type>
+        <object-name>itt1.nd</object-name>
+        <property>fdm/jsbsim/propulsion/engine[0]/itt-c</property>
+        <interpolation>
+            <entry><ind>0.0</ind><dep>0.0</dep></entry>
+            <entry><ind>200.0</ind><dep>0</dep></entry>
+            <entry><ind>400.0</ind><dep>30.0</dep></entry>
+            <entry><ind>600.0</ind><dep>90.0</dep></entry>
+            <entry><ind>1000.0</ind><dep>270.0</dep></entry>
+        </interpolation>
+        <axis>
+            <x>-1.0</x>
+            <y>0</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m>-2.251</x-m>
+            <y-m>-0.228</y-m>
+            <z-m>0.479</z-m>
+        </center>
+    </animation> 
+
+    <animation>
+        <type>rotate</type>
+        <object-name>itt2.nd</object-name>
+        <property>fdm/jsbsim/propulsion/engine[1]/itt-c</property>
+        <interpolation>
+            <entry><ind>0.0</ind><dep>0.0</dep></entry>
+            <entry><ind>200.0</ind><dep>0</dep></entry>
+            <entry><ind>400.0</ind><dep>30.0</dep></entry>
+            <entry><ind>600.0</ind><dep>90.0</dep></entry>
+            <entry><ind>1000.0</ind><dep>270.0</dep></entry>
+        </interpolation>
+        <axis>
+            <x>-1.0</x>
+            <y>0</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m>-2.251</x-m>
+            <y-m>-0.159</y-m>
+            <z-m>0.479</z-m>
+        </center>
+    </animation> 
+
+    <animation>
+        <type>rotate</type>
+        <object-name>tq1.nd</object-name>
+        <property>fdm/jsbsim/forces/fbx-prop-lbs</property>
+        <interpolation>
+            <entry><ind>0.0</ind><dep>0.0</dep></entry>
+            <entry><ind>2600.0</ind><dep>255.0</dep></entry>
+        </interpolation>
+        <axis>
+            <x>-1.0</x>
+            <y>0</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m>-2.251</x-m>
+            <y-m>-0.228</y-m>
+            <z-m>0.411</z-m>
+        </center>
+    </animation>
+
+   <text>
+        <name>TQ1</name>
+        <offsets>
+            <x-m>-2.2512</x-m>
+            <y-m>-0.215</y-m>
+            <z-m>0.429</z-m>
+        </offsets>
+        <alignment>center-center</alignment>
+        <axis-alignment>yz-plane</axis-alignment>
+        <type type="string">number-value</type>
+        <property>engines/engine[0]/torque-ftlb</property>
+        <format>%04.1f</format>
+        <font>led.txf</font>
+        <character-size>0.005</character-size>
+        <character-aspect-ratio type="double">0.8</character-aspect-ratio>
+        <font-resolution>
+            <width type="int">32</width>
+            <height type="int">32</height>
+        </font-resolution>
+    </text>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>tq2.nd</object-name>
+        <property>engines/engine[0]/torque-ftlb</property>
+        <interpolation>
+            <entry><ind>0.0</ind><dep>0.0</dep></entry>
+            <entry><ind>2600.0</ind><dep>255.0</dep></entry>
+        </interpolation>
+        <axis>
+            <x>-1.0</x>
+            <y>0</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m>-2.251</x-m>
+            <y-m>-0.159</y-m>
+            <z-m>0.411</z-m>
+        </center>
+    </animation>
+
+   <text>
+        <name>TQ2</name>
+        <offsets>
+            <x-m>-2.2512</x-m>
+            <y-m>-0.152</y-m>
+            <z-m>0.429</z-m>
+        </offsets>
+        <alignment>center-center</alignment>
+        <axis-alignment>yz-plane</axis-alignment>
+        <type type="string">number-value</type>
+        <property>engines/engine[0]/torque-ftlb</property>
+        <format>%04.1f</format>
+        <font>led.txf</font>
+        <character-size>0.005</character-size>
+        <character-aspect-ratio type="double">0.8</character-aspect-ratio>
+        <font-resolution>
+            <width type="int">32</width>
+            <height type="int">32</height>
+        </font-resolution>
+    </text>
+
+
+    <animation>
+        <type>rotate</type>
+        <object-name>pr1.nd</object-name>
+        <property>fdm/jsbsim/propulsion/engine[0]/propeller-rpm</property>
+        <interpolation>
+            <entry><ind>0.0</ind><dep>0.0</dep></entry>
+            <entry><ind>1000.0</ind><dep>80</dep></entry>
+            <entry><ind>1300.0</ind><dep>104.0</dep></entry>
+            <entry><ind>2000.0</ind><dep>258.0</dep></entry>
+            <entry><ind>2300.0</ind><dep>324.0</dep></entry>
+        </interpolation>
+        <axis>
+            <x>-1.0</x>
+            <y>0</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m>-2.251</x-m>
+            <y-m>-0.228</y-m>
+            <z-m>0.344</z-m>
+        </center>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>pr2.nd</object-name>
+        <property>fdm/jsbsim/propulsion/engine[1]/propeller-rpm</property>
+        <interpolation>
+            <entry><ind>0.0</ind><dep>0.0</dep></entry>
+            <entry><ind>1000.0</ind><dep>80</dep></entry>
+            <entry><ind>1300.0</ind><dep>104.0</dep></entry>
+            <entry><ind>2000.0</ind><dep>258.0</dep></entry>
+            <entry><ind>2300.0</ind><dep>324.0</dep></entry>
+        </interpolation>
+        <axis>
+            <x>-1.0</x>
+            <y>0</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m>-2.251</x-m>
+            <y-m>-0.159</y-m>
+            <z-m>0.344</z-m>
+        </center>
+    </animation>
+
+
+    <animation>
+        <type>rotate</type>
+        <object-name>trb1.nd</object-name>
+        <property>/fdm/jsbsim/propulsion/engine[0]/n1</property>
+        <interpolation>
+            <entry><ind>0.0</ind><dep>0.0</dep></entry>
+            <entry><ind>110.0</ind><dep>255.0</dep></entry>
+        </interpolation>
+        <axis>
+            <x>-1.0</x>
+            <y>0</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m>-2.251</x-m>
+            <y-m>-0.228</y-m>
+            <z-m>0.277</z-m>
+        </center>
+    </animation>
+
+   <text>
+        <name>left-N2</name>
+        <offsets>
+            <x-m>-2.2512</x-m>
+            <y-m>-0.215</y-m>
+            <z-m>0.313</z-m>
+        </offsets>
+        <alignment>center-center</alignment>
+        <axis-alignment>yz-plane</axis-alignment>
+        <type type="string">number-value</type>
+        <property>/fdm/jsbsim/propulsion/engine[0]/n1</property>
+        <format>%03.1f</format>
+        <font>led.txf</font>
+        <character-size>0.005</character-size>
+        <character-aspect-ratio type="double">0.8</character-aspect-ratio>
+        <font-resolution>
+            <width type="int">32</width>
+            <height type="int">32</height>
+        </font-resolution>
+    </text>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>trb2.nd</object-name>
+        <property>/fdm/jsbsim/propulsion/engine[1]/n1</property>
+        <interpolation>
+            <entry><ind>0.0</ind><dep>0.0</dep></entry>
+            <entry><ind>110.0</ind><dep>255.0</dep></entry>
+        </interpolation>
+        <axis>
+            <x>-1.0</x>
+            <y>0</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m>-2.251</x-m>
+            <y-m>-0.159</y-m>
+            <z-m>0.277</z-m>
+        </center>
+    </animation>
+
+   <text>
+        <name>right-N2</name>
+        <offsets>
+            <x-m>-2.2512</x-m>
+            <y-m>-0.152</y-m>
+            <z-m>0.313</z-m>
+        </offsets>
+        <alignment>center-center</alignment>
+        <axis-alignment>yz-plane</axis-alignment>
+        <type type="string">number-value</type>
+        <property>/fdm/jsbsim/propulsion/engine[1]/n1</property>
+        <format>%03.1f</format>
+        <font>led.txf</font>
+        <character-size>0.005</character-size>
+        <character-aspect-ratio type="double">0.8</character-aspect-ratio>
+        <font-resolution>
+            <width type="int">32</width>
+            <height type="int">32</height>
+        </font-resolution>
+    </text>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>fflw1.nd</object-name>
+        <property>/fdm/jsbsim/propulsion/engine/fuel-flow-rate-pps</property>
+        <interpolation>
+            <entry><ind>0.0</ind><dep>0.0</dep></entry>
+            <entry><ind>0.222222</ind><dep>240.0</dep></entry>
+        </interpolation>
+        <axis>
+            <x>-1.0</x>
+            <y>0</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m>-2.251</x-m>
+            <y-m>-0.228</y-m>
+            <z-m>0.210</z-m>
+        </center>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>fflw2.nd</object-name>
+        <property>/fdm/jsbsim/propulsion/engine[1]/fuel-flow-rate-pps</property>
+        <interpolation>
+            <entry><ind>0.0</ind><dep>0.0</dep></entry>
+            <entry><ind>0.222222</ind><dep>240.0</dep></entry>
+        </interpolation>
+        <axis>
+            <x>-1.0</x>
+            <y>0</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m>-2.251</x-m>
+            <y-m>-0.159</y-m>
+            <z-m>0.210</z-m>
+        </center>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>otc1.nd</object-name>
+        <property>/engines/engine[0]/n2</property>
+        <interpolation>
+            <entry><ind>0.0</ind><dep>0.0</dep></entry>
+            <entry><ind>119</ind><dep>75.0</dep></entry>
+        </interpolation>
+        <axis>
+            <x>-1.0</x>
+            <y>0</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m>-2.251</x-m>
+            <y-m>-0.228</y-m>
+            <z-m>0.143</z-m>
+        </center>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>opsi1.nd</object-name>
+        <property>/engines/engine[0]/n2</property>
+        <interpolation>
+            <entry><ind>0.0</ind><dep>0.0</dep></entry>
+            <entry><ind>119</ind><dep>40.0</dep></entry>
+        </interpolation>
+        <axis>
+            <x>1.0</x>
+            <y>0</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m>-2.251</x-m>
+            <y-m>-0.228</y-m>
+            <z-m>0.143</z-m>
+        </center>
+    </animation>
+
+
+    <animation>
+        <type>rotate</type>
+        <object-name>otc2.nd</object-name>
+        <property>/engines/engine[1]/n2</property>
+        <interpolation>
+            <entry><ind>0.0</ind><dep>0.0</dep></entry>
+            <entry><ind>119</ind><dep>75.0</dep></entry>
+        </interpolation>
+        <axis>
+            <x>-1.0</x>
+            <y>0</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m>-2.251</x-m>
+            <y-m>-0.159</y-m>
+            <z-m>0.143</z-m>
+        </center>
+    </animation>
+
+    <animation>    
+        <type>rotate</type>
+        <object-name>opsi2.nd</object-name>
+        <property>/engines/engine[1]/n2</property>
+        <interpolation>
+            <entry><ind>0.0</ind><dep>0.0</dep></entry>
+            <entry><ind>119</ind><dep>40.0</dep></entry>
+        </interpolation>
+        <axis>
+            <x>1.0</x>
+            <y>0</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m>-2.251</x-m>
+            <y-m>-0.159</y-m>
+            <z-m>0.143</z-m>
+        </center>
+    </animation>
+
+<!-- CoPilot instruments-->
+
+
+<!-- Pedestal instruments-->
+
+    <animation>    
+        <type>rotate</type>
+        <object-name>flap.nd</object-name>
+        <property>fdm/jsbsim/fcs/flap-pos-rad</property>
+        <interpolation>
+            <entry><ind>0.0</ind><dep>0.0</dep></entry>
+            <entry><ind>0.6108652375</ind><dep>200.0</dep></entry>
+        </interpolation>
+        <axis>
+            <x>-0.707</x>
+            <y>0</y>
+            <z>-0.707</z>
+        </axis>
+        <center>
+            <x-m>-2.177</x-m>
+            <y-m>-0.057</y-m>
+            <z-m>-0.005</z-m>
+        </center>
+    </animation>
+
+
+
+
+
+    <animation>
+        <type>material</type><!--orange-->
+        <object-name>eng.gg</object-name>
+        <object-name>plt.gg</object-name>
+        <object-name>rmi1</object-name>
+        <object-name>br1.nd</object-name>
+        <object-name>asi1.nd</object-name>
+        <object-name>asi2.nd</object-name>
+        <object-name>alt1.nd</object-name>
+        <object-name>vsi1.nd</object-name>
+        <object-name>itt1.nd</object-name>
+        <object-name>itt2.nd</object-name>
+        <object-name>tq1.nd</object-name>
+        <object-name>tq2.nd</object-name>
+        <object-name>pr1.nd</object-name>
+        <object-name>pr2.nd</object-name>
+        <object-name>trb1.nd</object-name>
+        <object-name>trb2.nd</object-name>
+        <object-name>fflw1.nd</object-name>
+        <object-name>fflw2.nd</object-name>
+        <object-name>otc1.nd</object-name>
+        <object-name>otc2.nd</object-name>
+        <object-name>opsi1.nd</object-name>
+        <object-name>opsi2.nd</object-name>
+        <object-name>flap.nd</object-name>
+    <emission>
+            <red>0.8</red>
+            <green>0.6</green>
+            <blue>0.5</blue>
+        </emission>
+        <ambient>
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+        </ambient>
+        <diffuse>
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+        </diffuse>
+        <specular>
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+        </specular>
+    </animation>
+    
+</PropertyList>
