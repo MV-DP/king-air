@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+    <path>rpmgauge.ac</path>
+
+    <animation>
+        <type>material</type>
+        <object-name>RPMFace</object-name>
+        <object-name>RPM.needle</object-name>
+        <emission>
+            <red>0.035</red>
+            <green>0.012</green>
+            <blue>0.007</blue>
+            <factor-prop>systems/electrical/outputs/eng-lights</factor-prop>
+        </emission>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>RPM.needle</object-name>
+        <property>engines/engine[1]/rpm</property>
+        <interpolation>
+            <entry><ind>0.0</ind><dep>0.0</dep></entry>
+            <entry><ind>1000.0</ind><dep>106.0</dep></entry>
+            <entry><ind>1300.0</ind><dep>138.0</dep></entry>
+            <entry><ind>1700.0</ind><dep>232.0</dep></entry>
+            <entry><ind>2000.0</ind><dep>311.0</dep></entry>
+        </interpolation>
+        <axis>
+            <x>-1.0</x>
+            <y>0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+
+</PropertyList>

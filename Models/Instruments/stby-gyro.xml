@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+    <path>stby-gyro.ac</path>
+
+    <animation>
+        <type>material</type>
+        <object-name>gyro-face</object-name>
+        <emission>
+            <red>0.035</red>
+            <green>0.012</green>
+            <blue>0.007</blue>
+            <factor-prop>systems/electrical/outputs/efis-lights</factor-prop>
+        </emission>
+    </animation>
+
+    <animation>
+        <type>material</type>
+        <object-name>Stby-gyro</object-name>
+        <emission>
+            <red>0.01</red>
+            <green>0.01</green>
+            <blue>0.01</blue>
+            <factor-prop>systems/electrical/outputs/panel-lights</factor-prop>
+        </emission>
+    </animation>
+
+    <animation>
+        <type>texmultiple</type>
+        <object-name>gyro-face</object-name>
+        <transform>
+            <property>orientation/pitch-deg</property>
+            <subtype>textranslate</subtype>
+            <factor>0.004362</factor>
+            <axis>
+                <x>0</x>
+                <y>1</y>
+                <z>0</z>
+            </axis>
+        </transform>
+        <transform>
+            <property>orientation/roll-deg</property>
+            <subtype>texrotate</subtype>
+            <center>
+                <x>0.125</x>
+                <y>0.5</y>
+            </center>
+            <axis>
+                <x>0</x>
+                <y>0</y>
+                <z>-1</z>
+            </axis>
+        </transform>
+    </animation>
+
+</PropertyList>

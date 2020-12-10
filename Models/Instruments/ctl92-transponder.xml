@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<!-- CTL 92 Control for TDR-94 transponder
+2.375"W x 2.625"H
+Syd Adams
+ -->
+
+<PropertyList>
+
+    <path>ctl92.ac</path>
+
+    <animation>
+        <type>select</type>
+        <object-name>C92freq.001</object-name>
+        <object-name>C92freq.002</object-name>
+        <object-name>C92freq.003</object-name>
+        <object-name>C92freq.004</object-name>
+        <object-name>C92mem.annun</object-name>
+        <condition>
+            <and>
+                <greater-than>
+                    <property>systems/electrical/outputs/transponder</property>
+                    <value>1</value>
+                </greater-than>
+                <greater-than>
+                    <property>instrumentation/kt-70/inputs/func-knob</property>
+                    <value>0</value>
+                </greater-than>
+            </and>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>CTL-92.pwr</object-name>
+        <property>instrumentation/kt-70/inputs/func-knob</property>
+        <factor>15</factor>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>-0.014</y-m>
+            <z-m>-0.018</z-m>
+        </center>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>C92freq.001</object-name>
+        <property>instrumentation/kt-70/outputs/id-code</property>
+        <factor>0.0001</factor>
+        <step>1000</step>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>C92freq.002</object-name>
+        <property>instrumentation/kt-70/outputs/id-code</property>
+        <factor>0.001</factor>
+        <step>100</step>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>C92freq.003</object-name>
+        <property>instrumentation/kt-70/outputs/id-code</property>
+        <factor>0.01</factor>
+        <step>10</step>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>C92freq.004</object-name>
+        <property>instrumentation/kt-70/outputs/id-code</property>
+        <factor>0.1</factor>
+        <step>1</step>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+<!--    OSG hotspots    -->
+
+    <animation>
+        <type>pick</type>
+        <object-name>C92pwr.off</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+            <command>property-adjust</command>
+            <property>instrumentation/kt-70/inputs/func-knob</property>
+            <step>-1</step>
+            <min>0</min>
+            <max>5</max>
+            <wrap>0</wrap>
+        </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>C92pwr.on</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+            <command>property-adjust</command>
+            <property>instrumentation/kt-70/inputs/func-knob</property>
+            <step>1</step>
+            <min>0</min>
+            <max>5</max>
+            <wrap>0</wrap>
+        </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>atc.ident</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+            <command>property-toggle</command>
+            <property>instrumentation/kt-70/inputs/ident-btn</property>
+        </binding>
+        </action>
+    </animation>
+
+</PropertyList>

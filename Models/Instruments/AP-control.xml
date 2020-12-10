@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<!--
+Author : Syd Adams
+Primus 1000 Autopilot Controller
+-->
+<PropertyList>
+<path>AP-control.ac</path>
+
+    <animation>
+        <type>select</type>
+        <object-name>AP-on</object-name>
+        <condition>
+            <not>
+                <property>autopilot/locks/passive-mode</property>
+            </not>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>YD-on</object-name>
+        <condition>
+            <property>autopilot/locks/yaw-damper</property>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>Low-on</object-name>
+        <condition>
+            <equals>
+                <property>instrumentation/flightdirector/roll-max</property>
+                <value>14</value>
+            </equals>
+        </condition>
+    </animation>
+<!-- Hotspots -->
+
+    <animation>
+        <type>pick</type>
+        <object-name>AP-toggle</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>nasal</command>
+                <script>systems.FlDr.toggle_autopilot("ap")</script>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>BNK-toggle</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>nasal</command>
+                <script>systems.FlDr.toggle_autopilot("bank")</script>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>YD-toggle</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>nasal</command>
+                <script>systems.FlDr.toggle_autopilot("yd")</script>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>Pitch.trim</object-name>
+        <action>
+            <button>0</button>
+			<repeatable>1</repeatable>
+			<interval-sec>0.2</interval-sec>
+            <binding>
+                <command>nasal</command>
+                <script>systems.FlDr.pitch_wheel(-1)</script>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>Pitch.trim</object-name>
+        <action>
+            <button>1</button>
+			<repeatable>1</repeatable>
+			<interval-sec>0.2</interval-sec>
+            <binding>
+                <command>nasal</command>
+                <script>systems.FlDr.pitch_wheel(1)</script>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>Pitch.trim</object-name>
+        <action>
+            <button>3</button>
+            <binding>
+                <command>nasal</command>
+                <script>systems.FlDr.pitch_wheel(-1)</script>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>Pitch.trim</object-name>
+        <action>
+            <button>4</button>
+            <binding>
+                <command>nasal</command>
+                <script>systems.FlDr.pitch_wheel(1)</script>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>Roll.trim</object-name>
+        <action>
+            <button>0</button>
+			<repeatable>1</repeatable>
+			<interval-sec>0.2</interval-sec>
+            <binding>
+                <command>nasal</command>
+                <script>systems.FlDr.roll_knob(-1)</script>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>Roll.trim</object-name>
+        <action>
+            <button>1</button>
+			<repeatable>1</repeatable>
+			<interval-sec>0.2</interval-sec>
+            <binding>
+                <command>nasal</command>
+                <script>systems.FlDr.roll_knob(1)</script>
+            </binding>
+        </action>
+    </animation>
+
+</PropertyList>

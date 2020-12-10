@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+    <path>ccu65.ac</path>
+
+    <animation>
+        <type>material</type>
+        <object-name>CCU65.face</object-name>
+        <object-name>CCU65.btn1</object-name>
+        <object-name>CCU65.btn2</object-name>
+        <object-name>CCU65.btn3</object-name>
+        <emission>
+            <red>0.035</red>
+            <green>0.012</green>
+            <blue>0.007</blue>
+            <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+        </emission>
+    </animation>
+
+</PropertyList>

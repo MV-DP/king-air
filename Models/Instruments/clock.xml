@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+    <path>clock.ac</path>
+
+    <animation>
+        <type>material</type>
+        <object-name>Clock.face</object-name>
+        <object-name>ScHand</object-name>
+        <object-name>MnHand</object-name>
+        <object-name>HrHand</object-name>
+        <emission>
+            <red>0.035</red>
+            <green>0.012</green>
+            <blue>0.007</blue>
+            <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+        </emission>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>ScHand</object-name>
+        <property>/instrumentation/clock/indicated-sec</property>
+        <factor>6</factor>
+        <axis>
+            <x>-1.0</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>MnHand</object-name>
+        <property>/instrumentation/clock/indicated-sec</property>
+        <factor>0.1</factor>
+        <axis>
+            <x>-1.0</x>
+            <y>0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>HrHand</object-name>
+        <property>/instrumentation/clock/indicated-sec</property>
+        <factor>0.008333</factor>
+        <axis>
+            <x>-1.0</x>
+            <y>0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+
+</PropertyList>

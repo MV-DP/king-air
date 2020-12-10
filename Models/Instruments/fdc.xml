@@ -1,0 +1,284 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+    <path>fdc.ac</path>
+
+    <animation>
+        <type>select</type>
+        <object-name>AP-alt</object-name>
+        <condition>
+            <equals>
+                <property>autopilot/locks/altitude</property>
+                <value>ALT</value>
+            </equals>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>AP-alts</object-name>
+        <condition>
+            <property>instrumentation/flightdirector/alt-arm</property>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>AP-vs</object-name>
+        <condition>
+            <equals>
+                <property>autopilot/locks/altitude</property>
+                <value>VS</value>
+            </equals>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>AP-ias</object-name>
+        <condition>
+            <equals>
+                <property>autopilot/locks/speed</property>
+                <value>IAS</value>
+            </equals>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>AP-dcs</object-name>
+        <condition>
+            <equals>
+                <property>autopilot/locks/altitude</property>
+                <value>DCS</value>
+            </equals>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>AP-climb</object-name>
+        <condition>
+            <equals>
+                <property>autopilot/locks/altitude</property>
+                <value>CLIMB</value>
+            </equals>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>AP-wl</object-name>
+        <condition>
+            <equals>
+                <property>autopilot/locks/heading</property>
+                <value>ROLL</value>
+            </equals>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>AP-hdg</object-name>
+        <condition>
+            <equals>
+                <property>autopilot/locks/heading</property>
+                <value>HDG</value>
+            </equals>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>AP-nav</object-name>
+        <condition>
+            <or>
+                <equals>
+                    <property>autopilot/locks/heading</property>
+                    <value>NAV</value>
+                </equals>
+                <equals>
+                    <property>autopilot/locks/heading</property>
+                    <value>GPS-CRS</value>
+                </equals>
+            </or>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>AP-gs-arm</object-name>
+        <condition>
+            <property>instrumentation/flightdirector/gs-arm</property>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>AP-navarm</object-name>
+        <condition>
+            <property>instrumentation/flightdirector/nav-arm</property>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>AP-bc</object-name>
+        <condition>
+            <property>instrumentation/nav/back-course-btn</property>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>AP-gs</object-name>
+        <condition>
+            <equals>
+                <property>autopilot/locks/altitude</property>
+                <value>GS</value>
+            </equals>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>AP-halfbank</object-name>
+        <condition>
+            <property>instrumentation/flightdirector/bank-limit-switch</property>
+        </condition>
+    </animation>
+
+<!-- Hotspots -->
+
+
+    <animation>
+        <type>pick</type>
+        <object-name>HDG.btn</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>nasal</command>
+                <script>systems.FlDr.set_mode("hdg");</script>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>NAV.btn</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>nasal</command>
+                <script>systems.FlDr.set_mode("nav");</script>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>APPR.btn</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>nasal</command>
+                <script>systems.FlDr.set_mode("apr");</script>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>BC.btn</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>nasal</command>
+                <script>systems.FlDr.set_mode("bc");</script>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>ALT.btn</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>nasal</command>
+                <script>systems.FlDr.set_mode("alt");</script>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>ALTS.btn</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>nasal</command>
+                <script>systems.FlDr.set_mode("asel");</script>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>VS.btn</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>nasal</command>
+                <script>systems.FlDr.set_mode("vs");</script>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>IAS.btn</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>nasal</command>
+                <script>systems.FlDr.set_mode("ias");</script>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>DCS.btn</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>nasal</command>
+                <script>systems.FlDr.set_mode("dcs");</script>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>CLIMB.btn</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>nasal</command>
+                <script>systems.FlDr.set_mode("climb");</script>
+            </binding>
+        </action>
+    </animation>
+
+</PropertyList>

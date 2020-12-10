@@ -1,0 +1,259 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+    <path>efis84-ehsi.ac</path>
+
+    <animation>
+        <type>material</type>
+        <object-name>EHSI.face</object-name>
+        <object-name>HDGback</object-name>
+        <object-name>HDGback.gps</object-name>
+        <object-name>hdg-bug</object-name>
+        <object-name>toflag</object-name>
+        <object-name>CRSneedle</object-name>
+        <object-name>CRSdeflection</object-name>
+        <object-name>EHSI.gps</object-name>
+        <object-name>EHSI.gsp1</object-name>
+        <object-name>EHSI.gsp2</object-name>
+        <object-name>EHSI.gsp3</object-name>
+        <object-name>EHSI.hdg1</object-name>
+        <object-name>EHSI.hdg2</object-name>
+        <object-name>EHSI.hdg3</object-name>
+        <object-name>EHSI.crs1</object-name>
+        <object-name>EHSI.crs2</object-name>
+        <object-name>EHSI.crs3</object-name>
+        <object-name>HDGknob</object-name>
+        <object-name>CRSknob</object-name>
+        <emission>
+            <red>0.035</red>
+            <green>0.035</green>
+            <blue>0.035</blue>
+            <factor-prop>systems/electrical/outputs/efis-lights</factor-prop>
+        </emission>
+    </animation>
+
+    <animation>
+        <type>material</type>
+        <object-name>EHSI.bezel</object-name>
+        <emission>
+            <red>0.010</red>
+            <green>0.010</green>
+            <blue>0.010</blue>
+            <factor-prop>systems/electrical/outputs/panel-lights</factor-prop>
+        </emission>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>toflag</object-name>
+        <condition>
+            <property>instrumentation/flightdirector/hsi/to-flag</property>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>EHSI.gps</object-name>
+        <condition>
+            <property>instrumentation/nav/slaved-to-gps</property>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>hdg-bug</object-name>
+        <property>autopilot/internal/fdm-heading-bug-error-deg</property>
+        <axis>
+            <x>-1.0</x>
+            <y>0</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.006</z-m>
+        </center>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>HDGback</object-name>
+        <object-name>CRSneedle</object-name>
+        <object-name>CRSdeflection</object-name>
+        <object-name>toflag</object-name>
+        <property>orientation/heading-magnetic-deg</property>
+        <axis>
+            <x>1.0</x>
+            <y>0</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.006</z-m>
+        </center>
+    </animation>
+
+<!--  COURSE -->
+
+    <animation>
+        <type>rotate</type>
+        <object-name>CRSneedle</object-name>
+        <object-name>CRSdeflection</object-name>
+        <object-name>toflag</object-name>
+        <property>instrumentation/flightdirector/hsi/crs-mag-heading</property>
+        <axis>
+            <x>-1.0</x>
+            <y>0</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.006</z-m>
+        </center>
+    </animation>
+
+    <animation>
+        <type>translate</type>
+        <object-name>CRSdeflection</object-name>
+        <property>instrumentation/flightdirector/hsi/crs-deflection</property>
+        <interpolation>
+            <entry><ind>-10.0</ind><dep>-0.0172</dep></entry>
+            <entry><ind>0.0</ind><dep>0.0</dep></entry>
+            <entry><ind>10.0</ind><dep>0.0172</dep></entry>
+        </interpolation>
+        <axis>
+            <x>0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.006</z-m>
+        </center>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>EHSI.crs1</object-name>
+        <property>instrumentation/flightdirector/hsi/crs-mag-heading</property>
+        <factor>0.001</factor>
+        <step>100</step>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>EHSI.crs2</object-name>
+        <property>instrumentation/flightdirector/hsi/crs-mag-heading</property>
+        <factor>0.01</factor>
+        <step>10</step>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>EHSI.crs3</object-name>
+        <property>instrumentation/flightdirector/hsi/crs-mag-heading</property>
+        <factor>0.1</factor>
+        <step>1</step>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+<!--  hdg bug -->
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>EHSI.hdg1</object-name>
+        <property>autopilot/settings/heading-bug-deg</property>
+        <factor>0.001</factor>
+        <step>100</step>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>EHSI.hdg2</object-name>
+        <property>autopilot/settings/heading-bug-deg</property>
+        <factor>0.01</factor>
+        <step>10</step>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>EHSI.hdg3</object-name>
+        <property>autopilot/settings/heading-bug-deg</property>
+        <factor>0.1</factor>
+        <step>1</step>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+<!--  groundspeed -->
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>EHSI.gsp1</object-name>
+        <property>velocities/groundspeed-kt</property>
+        <factor>0.001</factor>
+        <step>100</step>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>EHSI.gsp2</object-name>
+        <property>instrumentation/gps/indicated-ground-speed-kt</property>
+        <factor>0.01</factor>
+        <step>10</step>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>EHSI.gsp3</object-name>
+        <property>instrumentation/gps/indicated-ground-speed-kt</property>
+        <factor>0.1</factor>
+        <step>1</step>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+</PropertyList>

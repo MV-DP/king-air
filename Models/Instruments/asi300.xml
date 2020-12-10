@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+    <path>asi300gauge.ac</path>
+
+    <animation>
+        <type>material</type>
+        <object-name>ASIface</object-name>
+        <object-name>ASI.needle</object-name>
+        <object-name>ASI.needle.001</object-name>
+        <object-name>index.pointer1</object-name>
+        <object-name>index.pointer2</object-name>
+        <emission>
+            <red>0.035</red>
+            <green>0.012</green>
+            <blue>0.007</blue>
+            <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+        </emission>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>ASI.needle.001</object-name>
+        <property>/instrumentation/airspeed-indicator/airspeed-limit-kt</property>
+        <interpolation>
+        <entry><ind>0.0</ind><dep>178.0</dep></entry>
+            <entry><ind>170.0</ind><dep>178.0</dep></entry>
+            <entry><ind>240.0</ind><dep>268.0</dep></entry>
+            <entry><ind>300.0</ind><dep>333.0</dep></entry>
+        </interpolation>
+        <axis>
+            <x>-1.0</x>
+            <y>0.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>ASI.needle</object-name>
+        <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+        <interpolation>
+            <entry><ind>0.0</ind><dep>0.0</dep></entry>
+            <entry><ind>30.0</ind><dep>0.0</dep></entry>
+            <entry><ind>40.0</ind><dep>10.0</dep></entry>
+            <entry><ind>100.0</ind><dep>88.0</dep></entry>
+            <entry><ind>170.0</ind><dep>178.0</dep></entry>
+            <entry><ind>240.0</ind><dep>268.0</dep></entry>
+            <entry><ind>300.0</ind><dep>333.0</dep></entry>
+        </interpolation>
+        <axis>
+            <x>-1.0</x>
+            <y>0.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>index.pointer1</object-name>
+        <property>/instrumentation/airspeed-indicator/index[0]</property>
+        <interpolation>
+            <entry><ind>0.0</ind><dep>0.0</dep></entry>
+            <entry><ind>30.0</ind><dep>0.0</dep></entry>
+            <entry><ind>40.0</ind><dep>10.0</dep></entry>
+            <entry><ind>100.0</ind><dep>88.0</dep></entry>
+            <entry><ind>170.0</ind><dep>178.0</dep></entry>
+            <entry><ind>240.0</ind><dep>268.0</dep></entry>
+            <entry><ind>300.0</ind><dep>333.0</dep></entry>
+        </interpolation>
+        <axis>
+            <x>-1.0</x>
+            <y>0.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>index.pointer2</object-name>
+        <property>/instrumentation/airspeed-indicator/index[1]</property>
+        <interpolation>
+            <entry><ind>0.0</ind><dep>0.0</dep></entry>
+            <entry><ind>30.0</ind><dep>0.0</dep></entry>
+            <entry><ind>40.0</ind><dep>10.0</dep></entry>
+            <entry><ind>100.0</ind><dep>88.0</dep></entry>
+            <entry><ind>170.0</ind><dep>178.0</dep></entry>
+            <entry><ind>240.0</ind><dep>268.0</dep></entry>
+            <entry><ind>300.0</ind><dep>333.0</dep></entry>
+        </interpolation>
+        <axis>
+            <x>-1.0</x>
+            <y>0.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+
+</PropertyList>
