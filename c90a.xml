@@ -1,0 +1,180 @@
+<!--
+YASIM flight model for the Beechcraft King Air C90A.
+Feb 2010
+Syd Adams.
+
+Cruise @ 8500 lbs / 1900 rpm (max cruise power)
+12,000 ft = 242 kts
+16,000 ft = 247 kts / torque 1246 / ff pph 592
+21,000 ft = 243 kts
+
+MTOW 10,100 lbs
+1315 takeoff torque
+Stall spd - ( idle / 10100 lbs ):
+Flap full 78 kts
+Flap up 88 kts
+
+-->
+
+<airplane mass="6580">
+
+    <approach speed="90" aoa="6" fuel="0.5">
+        <control-setting axis="/controls/engines/engine[0]/throttle" value="0.25"/>
+        <control-setting axis="/controls/engines/engine[1]/throttle" value="0.25"/>
+        <control-setting axis="/controls/engines/engine[0]/condition" value="1.0"/>
+        <control-setting axis="/controls/engines/engine[1]/condition" value="1.0"/>
+        <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="1"/>
+        <control-setting axis="/controls/engines/engine[1]/propeller-pitch" value="1"/>
+        <control-setting axis="/controls/flight/flaps" value="1.0"/>
+        <control-setting axis="/controls/gear/gear-down" value="1"/>
+        <solve-weight idx="0" weight="180"/>
+        <solve-weight idx="1" weight="180"/>
+        <solve-weight idx="2" weight="1874"/>
+    </approach>
+
+    <cruise speed="247" alt="16000" fuel="0.5"> 
+        <control-setting axis="/controls/engines/engine[0]/throttle" value="0.863"/>
+        <control-setting axis="/controls/engines/engine[1]/throttle" value="0.863"/>
+        <control-setting axis="/controls/engines/engine[0]/condition" value="1.0"/>
+        <control-setting axis="/controls/engines/engine[1]/condition" value="1.0"/>
+        <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="0.75"/>
+        <control-setting axis="/controls/engines/engine[1]/propeller-pitch" value="0.75"/>
+        <control-setting axis="/controls/flight/flaps" value="0.0"/>
+        <control-setting axis="/controls/gear/gear-down" value="0"/>
+        <solve-weight idx="0" weight="180"/>
+        <solve-weight idx="1" weight="180"/>
+        <solve-weight idx="2" weight="300"/>
+    </cruise>
+
+    <cockpit x="4.2" y="-0.3" z="0.27"/>
+
+    <fuselage ax="4.408"  ay="0" az="-0.255" bx="1.67" by="0" bz="0.159"
+        width="1.6" taper="0.2" midpoint="1.0" cx="1.2" cy="1.2"/><!--nose -->
+
+    <fuselage ax="1.67" ay="0" az="0.159" bx="-1.67" by="0" bz="0.159"
+        width="1.6" taper="1.0" midpoint="0.5" cx="1.2" cy="1.2"/><!--fuselage -->
+
+    <fuselage ax="-1.67"  ay="0" az="0.159" bx="-6.11" by="0" bz="0.57"
+        width="1.6" taper="0.1" midpoint="0.0" cx="1.2" cy="1.2"/><!--tail -->
+
+    <wing x="-0.0" y="0.80" z="-0.55" length="6.858" chord="2.6"
+        sweep="-2" dihedral="7" taper="0.45"  camber="0.0"
+        incidence="2.0" twist="-2.0">
+        <stall aoa="13" width="16" peak="1.5"/>
+        <flap0 start="0" end=".528" lift="1.5" drag="1.7"/>
+        <flap1 start=".528" end=".868" lift="1.3" drag="1.2"/>
+        <control-input axis="/controls/flight/flaps" control="FLAP0"/>
+        <control-speed control="FLAP0" transition-time="7"/>
+        <control-output control="FLAP0" prop="/surface-positions/flap-pos-norm"/>
+        <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"
+        src0="-1" dst0="-0.98" src1="1" dst1="1.02"/>
+        <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
+        <control-output control="FLAP1" side="left"
+        prop="/surface-positions/left-aileron-pos-norm"/>
+        <control-output control="FLAP1" side="right"
+        prop="/surface-positions/right-aileron-pos-norm"/>
+    </wing>
+
+    <hstab x="-4.63" y="0.38" z="0.58" length="1.8" chord="1.55"
+        sweep="0" dihedral="6" taper="0.6" effectiveness="1.3" camber="-0.002">
+        <stall aoa="18" width="3" peak="1.5"/>
+        <flap0 start="0" end="1" lift="1.5" drag="1.2"/>
+        <control-input axis="/controls/flight/elevator" control="FLAP0"/>
+        <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
+        <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
+    </hstab>
+
+    <vstab x="-4.8" y="0.00" z="0.736" length="2.4" chord="2.0"
+        sweep="27" taper="0.3">
+        <stall aoa="12" width="4" peak="1.5"/>
+        <flap0 start="0" end="1" lift="1.5" drag="1.2"/>
+        <control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
+        <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
+        <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm"/>
+    </vstab>
+
+<!--
+384 gals @ Jet A - 6.72 ppg
+-->
+    <tank x="-0.23" y="3.086" z="-0.550" capacity="1286" jet="true"/>
+    <tank x="-0.23" y="-3.086" z="-0.550" capacity="1286" jet="true"/>
+
+    <gear x="3.98" y="0.00" z="-1.958" compression=".5" retract-time="6"
+    spring="0.6">
+        <control-input axis="/controls/flight/rudder" control="STEER" square="true"
+        src0="-1.0" src1="1.0"
+        dst0="-0.8" dst1="0.8"/>
+        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+        <control-speed control="EXTEND" transition-time="5"/>
+        <control-output control="EXTEND" prop="/gear/gear[0]/position-norm"/>
+    </gear>
+
+    <gear x="-0.25" y="2.15" z="-1.873" compression=".5" retract-time="5"
+    spring="0.95" damp="1.0" sfric="1.0">
+        <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
+        <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
+        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+        <control-speed control="EXTEND" transition-time="5.1"/>
+        <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
+    </gear>
+
+    <gear x="-0.25" y="-2.15" z="-1.873" compression=".5" retract-time="5"
+    spring="0.95" damp="1.0" sfric="1.0">
+        <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
+        <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
+        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+        <control-speed control="EXTEND" transition-time="5.2"/>
+        <control-output control="EXTEND" prop="/gear/gear[2]/position-norm"/>
+    </gear>
+
+    <propeller x="2.1" y="2.156" z="-0.266"
+        mass="300" moment="10" radius="1.32"
+        cruise-speed="260" cruise-rpm="1900"
+        cruise-power="530" cruise-alt="16000"
+        min-rpm="1000" max-rpm="2200">
+        <turbine-engine
+            eng-power="540" eng-rpm="2200" alt="16000"
+            flat-rating="550" min-n2="65" max-n2="100" bsfc="0.46" spool-time="3"/>
+        <actionpt x="3.1" y="2.156" z="-0.266"/>
+        <control-input axis="/controls/engines/engine[0]/throttle"
+        control="THROTTLE"/>
+        <control-input axis="/controls/engines/engine[0]/condition"
+        control="CONDLEVER"/>
+        <control-input axis="/controls/engines/engine[0]/starter"
+        control="STARTER"/>
+        <control-input axis="/controls/engines/engine[0]/propeller-pitch"
+        control="ADVANCE"/>
+        <control-input axis="/controls/engines/engine[0]/propeller-feather"
+        control="PROPFEATHER"/>
+    </propeller>
+
+    <propeller x="2.1" y="-2.156" z="-0.266"
+        mass="300" moment="10" radius="1.32"
+        cruise-speed="260" cruise-rpm="1900"
+        cruise-power="530" cruise-alt="16000"
+        min-rpm="1000" max-rpm="2200">
+        <turbine-engine
+            eng-power="545" eng-rpm="2200" alt="16000"
+            flat-rating="550" min-n2="65" max-n2="100" bsfc="0.46" spool-time="3"/>
+        <actionpt x="3.1" y="-2.156" z="-0.266"/>
+        <control-input axis="/controls/engines/engine[0]/throttle"
+        control="THROTTLE"/>
+        <control-input axis="/controls/engines/engine[0]/condition"
+        control="CONDLEVER"/>
+        <control-input axis="/controls/engines/engine[0]/starter"
+        control="STARTER"/>
+        <control-input axis="/controls/engines/engine[0]/propeller-pitch"
+        control="ADVANCE"/>
+        <control-input axis="/controls/engines/engine[0]/propeller-feather"
+        control="PROPFEATHER"/>
+    </propeller>
+
+<ballast x="-4.5" y="0.0" z="2" mass="-1000"/>
+<ballast x="3.5" y="0.0" z="-0.5" mass="800"/>
+
+    <weight x="1.37" y="0.3" z="0.270" mass-prop="/sim/weight[0]/weight-lb"/>
+    <weight x="1.37" y="-0.3" z="0.270" mass-prop="/sim/weight[1]/weight-lb"/>
+    <weight x="0.0" y="0" z="0.25" mass-prop="/sim/weight[2]/weight-lb"/>
+    <weight x="-2.5" y="0" z="0" mass-prop="/sim/weight[3]/weight-lb"/>
+
+</airplane>

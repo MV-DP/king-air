@@ -1,0 +1,351 @@
+<?xml version="1.0"?>
+<!--
+************************************************************************
+Beechcraft King Air B200
+Feb 2010
+Syd Adams
+************************************************************************
+-->
+
+<PropertyList>
+    <sim>
+        <description>Beechcraft King Air B200</description>
+		<long-description>
+         The Beechcraft Super King Air family is part of a line of twin-turboprop aircraft produced by Beechcraft. The Beechcraft 1900 regional airliner was derived from the Model B200 King Air.
+        </long-description>
+        <status>development</status>
+        <author>Syd Adams, Martien van der Plas</author>
+        <flight-model>jsb</flight-model>
+        <aero>b200</aero>
+        <fuel-fraction>0.5</fuel-fraction>
+        <startup>
+            <splash-texture>Aircraft/king-air/b200splash.jpg</splash-texture>
+        </startup>
+		
+		<previews>
+		    <preview>
+                <type>exterior</type>
+                <splash type="bool">true</splash>
+                <path>Splash/exteriorB200.png</path>
+            </preview>
+        </previews>
+
+        <multiplay>
+            <generic>
+                <int n="0" alias="/systems/electrical/outputs/beacon"/>
+                <int n="1" alias="/systems/electrical/outputs/strobe"/>
+                <int n="2" alias="/systems/electrical/outputs/nav-lights"/>
+                <int n="3" alias="/systems/electrical/outputs/landing-lights"/>
+                <int n="4" alias="/systems/electrical/outputs/landing-lights[1]"/>
+                <int n="5" alias="/systems/electrical/outputs/taxi-lights"/>
+                <float n="0" alias="/position/gear-agl-m"/>
+                <float n="1" alias="/controls/cabin-door/position-norm"/>
+                <string  alias="/sim/multiplay/callsign"/>
+            </generic>
+        </multiplay>
+
+    <model>
+        <path>Aircraft/king-air/Models/B200/kingair-b200.xml</path>
+        <offsets>
+            <x-m>-6.5</x-m>
+        </offsets>
+        <livery>
+                <file type="string">default</file>
+            </livery>
+        <autostart type="bool">0</autostart>
+        <glass-refl type="float">0.25</glass-refl>
+        <refl type="float">0.1</refl>
+        <amb type="float">0.1</amb>
+    </model>
+
+    <view n="0">
+        <internal archive="y">true</internal>
+        <name>Cockpit</name>
+        <type>lookfrom</type>
+        <internal type="bool">true</internal>
+        <config>
+            <default-field-of-view-deg type="double">70.0</default-field-of-view-deg>
+            <x-offset-m type="double">-0.4087</x-offset-m>
+            <y-offset-m type="double">0.67</y-offset-m>
+            <z-offset-m type="double">-1.53</z-offset-m>
+            <pitch-offset-deg>-8</pitch-offset-deg>
+            <limits>
+                <enabled type="bool">true</enabled>
+                <left>
+                  <heading-max-deg type="double">130</heading-max-deg>
+                  <x-offset-max-m type="double">0.25</x-offset-max-m>
+                  <x-offset-threshold-deg type="double">45</x-offset-threshold-deg>
+                </left>
+                <right>
+                    <heading-max-deg type="double">160</heading-max-deg>
+                    <x-offset-max-m type="double">0.20</x-offset-max-m>
+                    <x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+                </right>
+            </limits>
+        </config>
+    </view>
+
+    <view n="100">
+        <name>Passenger View</name>
+        <enabled type="bool">true</enabled>
+        <type>lookfrom</type>
+        <internal type="bool">true</internal>
+        <config>
+            <from-model type="bool">true</from-model>
+            <from-model-idx type="int">0</from-model-idx>
+            <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+            <default-field-of-view-deg type="double">70.0</default-field-of-view-deg>
+            <default-pitch-deg type="double">0</default-pitch-deg>
+            <default-heading-deg type="double">0</default-heading-deg>
+            <front-direction-deg type="double">0</front-direction-deg>
+            <front-left-direction-deg type="double">45</front-left-direction-deg>
+            <left-direction-deg type="double">90</left-direction-deg>
+            <back-left-direction-deg type="double">135</back-left-direction-deg>
+            <back-direction-deg type="double">180</back-direction-deg>
+            <back-right-direction-deg type="double">225</back-right-direction-deg>
+            <right-direction-deg type="double">270</right-direction-deg>
+            <front-right-direction-deg type="double">315</front-right-direction-deg>
+            <x-offset-m type="double">0.408</x-offset-m>
+            <y-offset-m type="double">0.67</y-offset-m>
+            <z-offset-m type="double">-1.32</z-offset-m>
+            <pitch-offset-deg>-8</pitch-offset-deg>
+            <dynamic-view type="bool">true</dynamic-view>
+            <limits>
+                <enabled type="bool">true</enabled>
+                <left>
+                    <heading-max-deg type="double">140</heading-max-deg>
+                    <x-offset-max-m type="double">0.15</x-offset-max-m>
+                    <x-offset-threshold-deg type="double">45</x-offset-threshold-deg>
+                </left>
+                <right>
+                    <heading-max-deg type="double">140</heading-max-deg>
+                    <x-offset-max-m type="double">0.15</x-offset-max-m>
+                    <x-offset-threshold-deg type="double">45</x-offset-threshold-deg>
+                </right>
+            </limits>
+        </config>
+    </view>
+
+    <chase-distance-m type="double" archive="y">-18.0</chase-distance-m>
+
+    <airport>
+        <runways>
+            <start-offset-m>20</start-offset-m>
+        </runways>
+    </airport>
+
+    <systems>
+        <path>Aircraft/king-air/Systems/systems.xml</path>
+        <electrical>
+            <path></path>
+        </electrical>
+        <autopilot>
+            <path>Aircraft/king-air/Systems/autopilot.xml</path>
+        </autopilot>
+    </systems>
+
+        <instrumentation>
+            <path>Aircraft/king-air/Systems/instrumentation.xml</path>
+        </instrumentation>
+
+    <sound>
+        <path>Aircraft/king-air/Sound/king-air-sound.xml</path>
+    </sound>
+
+    <flaps>
+        <setting>0.000</setting>
+        <setting>0.33</setting><!--TO/Appr-->
+        <setting>0.66</setting>
+        <setting>1.000</setting>
+    </flaps>
+
+    <allow-toggle-cockpit>true</allow-toggle-cockpit>
+
+    <yokes-visible type="bool">1</yokes-visible>
+
+    <menubar>
+        <default>
+            <menu n="10">
+                <label>B200</label>
+                <enabled type="bool">true</enabled>
+                <item>
+                    <label>Autostart</label>
+                    <binding>
+                        <command>property-toggle</command>
+                        <property>sim/model/autostart</property>
+                    </binding>
+                </item>
+                <item>
+                    <label>Yokes On/Off</label>
+                    <binding>
+                        <command>property-toggle</command>
+                        <property>sim/yokes-visible</property>
+                    </binding>
+                </item>
+                <item>
+                    <label>Cabin Door</label>
+                    <binding>
+                        <command>property-toggle</command>
+                        <property>fdm/jsbsim/systems/door/open</property>
+                    </binding>
+                </item>
+                <item>
+                    <label>Select Livery</label>
+                    <binding>
+                        <command>nasal</command>
+                        <script>aircraft.livery.dialog.toggle()</script>
+                    </binding>
+                </item>
+                <!--item>
+                    <label>Manual</label>
+                    <binding>
+                        <command>property-toggle</command>
+                        <property>sim/model/manual/enabled</property>
+                    </binding>
+                </item-->
+            </menu>
+        </default>
+    </menubar>
+
+    <hud>
+        <enable3d>false</enable3d>
+    </hud>
+
+</sim>
+
+<autopilot>
+    <locks>
+        <heading type="string"></heading>
+        <heading-armed type="string"></heading-armed>
+        <altitude type="string"></altitude>
+        <altitude-armed type="string"></altitude-armed>
+        <fd-status type="bool">1</fd-status>
+        <ap-status type="string"></ap-status>
+        <yd-status type="string"></yd-status>
+    </locks>
+    <settings>
+        <heading-bug-deg type="int">0</heading-bug-deg>
+        <target-fl type="int">100</target-fl>
+        <target-vs type="int">0</target-vs>
+        <target-ias type="int">240</target-ias>
+        <bank-limit type="int">27</bank-limit>
+        <target-pitch-deg type="double">0.0</target-pitch-deg>
+        <target-roll-deg type="double">0.0</target-roll-deg>
+    </settings>
+</autopilot>
+
+<fdm>
+    <jsbsim>
+        <systems>
+            <door>
+                <open type="bool">0</open>
+                <pos-norm type="double">0.0</pos-norm>
+            </door>
+        </systems>
+    </jsbsim>
+</fdm>
+
+    <payload>
+        <weight n="0">
+            <name>Pilot</name>
+            <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[0]">180</weight-lb>
+            <max-lb>500</max-lb>
+            <min-lb>180</min-lb>
+        </weight>
+
+        <weight n="1">
+            <name>Copilot</name>
+            <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[1]">0</weight-lb>
+            <max-lb>200</max-lb>
+            <min-lb>0</min-lb>
+        </weight>
+        <weight n="2">
+            <name>Passengers</name>
+            <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[2]">380</weight-lb>
+            <max-lb>1500</max-lb>
+            <min-lb>0</min-lb>
+        </weight>
+        <weight  n="3">
+            <name type="string">Baggage</name>
+            <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[3]">20</weight-lb>
+            <min-lb type="double">0.0</min-lb>
+            <max-lb type="double">500.0</max-lb>
+        </weight>
+    </payload>
+
+    <input>
+        <keyboard>
+            <key n="267">
+                <name>F11</name>
+                <desc>Pop up autopilot dialog</desc>
+                <binding>
+                    <command>nasal</command>
+                    <script>dialogs.ap_settings.toggle()</script>
+                </binding>
+            </key>
+            <key n="268">
+                <name>F12</name>
+                <desc>Radio Stack</desc>
+                <binding>
+                    <command>nasal</command>
+                    <script>dialogs.Radio.open()</script>
+                </binding>
+            </key>
+             <key n="77">
+                <name>M</name>
+                <desc>Condition leaner</desc>
+                <repeatable type="bool">true</repeatable>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>controls/engines/engine[0]/mixture</property>
+                    <step>-0.01</step>
+                    <min>0</min>
+                    <max>1</max>
+                    <wrap>0</wrap>
+                </binding>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>controls/engines/engine[1]/mixture</property>
+                    <step>-0.01</step>
+                    <min>0</min>
+                    <max>1</max>
+                    <wrap>0</wrap>
+                </binding>
+            </key>
+             <key n="109">
+                <name>m</name>
+                <desc>Condition richer</desc>
+                <repeatable type="bool">true</repeatable>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>controls/engines/engine[0]/mixture</property>
+                    <step>0.01</step>
+                    <min>0</min>
+                    <max>1</max>
+                    <wrap>0</wrap>
+                </binding>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>controls/engines/engine[1]/mixture</property>
+                    <step>0.01</step>
+                    <min>0</min>
+                    <max>1</max>
+                    <wrap>0</wrap>
+                </binding>
+            </key>
+        </keyboard>
+    </input>
+
+    <nasal>
+        <systems>
+            <file>Aircraft/king-air/Nasal/kingair.nas</file>
+        </systems>
+        <dialogs>
+            <file>Aircraft/king-air/Nasal/dialogs.nas</file>
+        </dialogs>
+        <CTL>
+            <file>Aircraft/king-air/Nasal/controls.nas</file>
+        </CTL>
+    </nasal>
+
+</PropertyList>
