@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+<path>ehsi.ac</path>
+
+    <animation>
+        <type>texrotate</type>
+        <object-name>ehsi.cmps</object-name>
+        <property>orientation/heading-magnetic-deg</property>
+        <axis>
+            <x>0</x>
+            <y>0</y>
+            <z>-1</z>
+        </axis>
+        <center>
+            <x>0.75</x>
+            <y>0.75</y>
+        </center>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>crs.nd</object-name>
+        <object-name>crs.dfl</object-name>
+        <object-name>fr.ptr</object-name>
+        <object-name>to.ptr</object-name>
+        <property>orientation/heading-magnetic-deg</property>
+        <axis>
+            <x>1.0</x>
+            <y>0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>crs.nd</object-name>
+        <object-name>crs.dfl</object-name>
+        <object-name>fr.ptr</object-name>
+        <object-name>to.ptr</object-name>
+        <property>instrumentation/nav/radials/selected-deg</property>
+        <axis>
+            <x>-1.0</x>
+            <y>0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>translate</type>
+        <object-name>crs.dfl</object-name>
+        <property>instrumentation/nav/heading-needle-deflection-norm</property>
+        <factor>0.0223</factor>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>hdg.bg</object-name>
+        <property>autopilot/internal/heading-bug-error-deg</property>
+        <axis>
+            <x>-1.0</x>
+            <y>0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>gs.sc</object-name>
+        <object-name>gs.ptr</object-name>
+        <condition>
+            <property>instrumentation/nav/has-gs</property>
+         </condition>
+    </animation>
+
+    <animation>
+        <type>translate</type>
+        <object-name>gs.ptr</object-name>
+        <property>instrumentation/nav/gs-needle-deflection</property>
+        <factor>0.006</factor>
+        <axis>
+            <x>0.0</x>
+            <y>0</y>
+            <z>1.0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>to.ptr</object-name>
+        <condition>
+            <property>instrumentation/nav/to-flag</property>
+         </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>fr.ptr</object-name>
+        <condition>
+            <property>instrumentation/nav/from-flag</property>
+         </condition>
+    </animation>
+
+
+</PropertyList>

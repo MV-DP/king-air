@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+<path>eadi.ac</path>
+
+    <animation>
+        <type>texmultiple</type>
+        <object-name>att</object-name>
+        <transform>
+            <subtype>textranslate</subtype>
+            <property>orientation/pitch-deg</property>
+            <interpolation>
+                <entry><ind>-80.0</ind><dep>-0.3562</dep></entry>
+                <entry><ind>0.0</ind><dep>0.0</dep></entry>
+                <entry><ind>80.0</ind><dep>0.3562</dep></entry>
+            </interpolation>
+            <axis>
+                <x>0</x>
+                <y>1</y>
+            </axis>
+        </transform>
+        <transform>
+            <subtype>texrotate</subtype>
+            <property>orientation/roll-deg</property>
+            <axis>
+                <x>0</x>
+                <y>0</y>
+                <z>-1</z>
+            </axis>
+            <center>
+                <x>0.75</x>
+                <y>0.5</y>
+            </center>
+        </transform>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>vora.txt</object-name>
+        <condition>
+            <equals>
+                <property>autopilot/locks/heading-armed</property>
+                <value>VOR</value>
+            </equals>
+         </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>loca.txt</object-name>
+        <condition>
+            <equals>
+                <property>autopilot/locks/heading-armed</property>
+                <value>LOC</value>
+            </equals>
+         </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>hdgm.txt</object-name>
+        <condition>
+            <equals>
+                <property>autopilot/locks/heading</property>
+                <value>HDG</value>
+            </equals>
+         </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>vorm.txt</object-name>
+        <condition>
+            <equals>
+                <property>autopilot/locks/heading</property>
+                <value>VOR</value>
+            </equals>
+         </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>locm.txt</object-name>
+        <condition>
+            <equals>
+                <property>autopilot/locks/heading</property>
+                <value>LOC</value>
+            </equals>
+         </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>ap.txt</object-name>
+        <condition>
+            <equals>
+                <property>autopilot/locks/ap-status</property>
+                <value>AP</value>
+            </equals>
+         </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>gsm.txt</object-name>
+        <condition>
+            <equals>
+                <property>autopilot/locks/altitude</property>
+                <value>GS</value>
+            </equals>
+         </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>iasm.txt</object-name>
+        <condition>
+            <equals>
+                <property>autopilot/locks/altitude</property>
+                <value>IAS</value>
+            </equals>
+         </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>vsm.txt</object-name>
+        <condition>
+            <equals>
+                <property>autopilot/locks/altitude</property>
+                <value>VS</value>
+            </equals>
+         </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>altm.txt</object-name>
+        <condition>
+            <equals>
+                <property>autopilot/locks/altitude</property>
+                <value>ALT</value>
+            </equals>
+         </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>gsa.txt</object-name>
+        <condition>
+            <equals>
+                <property>autopilot/locks/altitude-armed</property>
+                <value>GS</value>
+            </equals>
+         </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>alta.txt</object-name>
+        <condition>
+            <equals>
+                <property>autopilot/locks/altitude-armed</property>
+                <value>ALT</value>
+            </equals>
+         </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>vbars</object-name>
+        <condition>
+            <property>autopilot/locks/fd-status</property>
+         </condition>
+    </animation>
+
+</PropertyList>
