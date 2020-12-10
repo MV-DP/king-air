@@ -1,0 +1,21 @@
+<!-- Beechcraft C90A
+Syd Adams
+-->
+
+<PropertyList>
+
+    <path>fdeck.ac</path>
+
+    <model>
+        <name>panel1</name>
+        <path>Aircraft/king-air/Models/C90A/panel1.xml</path>
+        <offsets>
+            <x-m>-2.070</x-m>
+            <y-m>0</y-m>
+            <z-m>0.345</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+
+</PropertyList>

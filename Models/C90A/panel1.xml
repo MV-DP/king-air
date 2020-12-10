@@ -1,0 +1,390 @@
+<!-- Beechcraft C90A panel layout 1
+Syd Adams
+-->
+
+<PropertyList>
+
+<!-- Pilot side-->
+
+    <model>
+        <name>LHasi</name>
+        <path>Aircraft/king-air/Models/Instruments/asi300.xml</path>
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>-0.518</y-m>
+            <z-m>0.066</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>LHrmi</name>
+        <path>Aircraft/king-air/Models/Instruments/rmi.xml</path>
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>-0.518</y-m>
+            <z-m>-0.028</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>LHdme</name>
+        <path>Aircraft/king-air/Models/Instruments/dme.xml</path>
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>-0.518</y-m>
+            <z-m>-0.115</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>LHati</name>
+        <path>Aircraft/king-air/Models/Instruments/ai.xml</path>
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>-0.412</y-m>
+            <z-m>0.049</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>LHhsi</name>
+        <path>Aircraft/king-air/Models/Instruments/hsi.xml</path>
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>-0.412</y-m>
+            <z-m>-0.078</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>LHalt</name>
+        <path>Aircraft/king-air/Models/Instruments/altimeter1.xml</path>
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>-0.303</y-m>
+            <z-m>0.066</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>LHvsi</name>
+        <path>Aircraft/king-air/Models/Instruments/vsi.xml</path>
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>-0.303</y-m>
+            <z-m>-0.028</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>LHralt</name>
+        <path>Aircraft/king-air/Models/Instruments/ralt.xml</path>
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>-0.303</y-m>
+            <z-m>-0.115</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+<!-- Engine gauges -->
+
+    <model>
+        <name>ITT1</name>
+        <path>Aircraft/king-air/Models/Instruments/itt1.xml</path>
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>-0.206</y-m>
+            <z-m>0.130</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>ITT2</name>
+        <path>Aircraft/king-air/Models/Instruments/itt2.xml</path>
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>-0.143</y-m>
+            <z-m>0.130</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>Torque1</name>
+        <path>Aircraft/king-air/Models/Instruments/torq1.xml</path>
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>-0.206</y-m>
+            <z-m>0.070</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>Torque2</name>
+        <path>Aircraft/king-air/Models/Instruments/torq2.xml</path>
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>-0.143</y-m>
+            <z-m>0.070</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>Rpm1</name>
+        <path>Aircraft/king-air/Models/Instruments/rpm1.xml</path>
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>-0.206</y-m>
+            <z-m>0.010</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>Rpm2</name>
+        <path>Aircraft/king-air/Models/Instruments/rpm2.xml</path>
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>-0.143</y-m>
+            <z-m>0.010</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>N2-1</name>
+        <path>Aircraft/king-air/Models/Instruments/n21.xml</path>
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>-0.206</y-m>
+            <z-m>-0.05</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>N2-2</name>
+        <path>Aircraft/king-air/Models/Instruments/n22.xml</path>
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>-0.143</y-m>
+            <z-m>-0.05</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>Fflow1</name>
+        <path>Aircraft/king-air/Models/Instruments/fflow1.xml</path>
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>-0.206</y-m>
+            <z-m>-0.11</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>Fflow2</name>
+        <path>Aircraft/king-air/Models/Instruments/fflow2.xml</path>
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>-0.143</y-m>
+            <z-m>-0.11</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>Oil1</name>
+        <path>Aircraft/king-air/Models/Instruments/oilp1.xml</path>
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>-0.206</y-m>
+            <z-m>-0.17</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>Oil2</name>
+        <path>Aircraft/king-air/Models/Instruments/oilp2.xml</path>
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>-0.143</y-m>
+            <z-m>-0.17</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+<!-- center-->
+
+    <model>
+        <name>Comm1</name>
+        <path>Aircraft/Instruments-3d/VHF-22/ctl22-com1.xml</path>
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>-0.062</y-m>
+            <z-m>0.015</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>Comm2</name>
+        <path>Aircraft/Instruments-3d/VHF-22/ctl22-com2.xml</path>
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>0.221</y-m>
+            <z-m>0.015</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>Nav1</name>
+        <path>Aircraft/Instruments-3d/VIR-32/ctl32-nav1.xml</path>
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>-0.062</y-m>
+            <z-m>-0.065</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>Nav2</name>
+        <path>Aircraft/Instruments-3d/VIR-32/ctl32-nav2.xml</path>
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>0.221</y-m>
+            <z-m>-0.065</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>ATC</name>
+        <path>Aircraft/Instruments-3d/TDR-94/ctl92-transponder.xml</path>
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>-0.062</y-m>
+            <z-m>-0.145</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>ADF</name>
+        <path>Aircraft/Instruments-3d/ADF-462/ctl62-adf.xml</path>
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>0.221</y-m>
+            <z-m>-0.145</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+<!-- Copilot side-->
+
+    <model>
+        <name>RHasi</name>
+        <path>Aircraft/king-air/Models/Instruments/asi300.xml</path>
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>0.303</y-m>
+            <z-m>0.066</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>LHrmi</name>
+        <path>Aircraft/king-air/Models/Instruments/rmi.xml</path>
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>0.303</y-m>
+            <z-m>-0.028</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>LHdme</name>
+        <path>Aircraft/king-air/Models/Instruments/dme.xml</path>
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>0.303</y-m>
+            <z-m>-0.115</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>LHati</name>
+        <path>Aircraft/king-air/Models/Instruments/ai.xml</path>
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>0.412</y-m>
+            <z-m>0.049</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>LHhsi</name>
+        <path>Aircraft/king-air/Models/Instruments/hsi.xml</path>
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>0.412</y-m>
+            <z-m>-0.078</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>LHalt</name>
+        <path>Aircraft/king-air/Models/Instruments/altimeter1.xml</path>
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>0.518</y-m>
+            <z-m>0.066</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>LHvsi</name>
+        <path>Aircraft/king-air/Models/Instruments/vsi.xml</path>
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>0.518</y-m>
+            <z-m>-0.028</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>LHralt</name>
+        <path>Aircraft/king-air/Models/Instruments/ralt.xml</path>
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>0.518</y-m>
+            <z-m>-0.115</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+
+</PropertyList>
